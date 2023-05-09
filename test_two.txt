@@ -1,0 +1,19 @@
+short_options
+Each character in this string will be used as option characters and matched against options passed to the script starting with a single hyphen (-).
+For example, an option string "x" recognizes an option -x.
+Only a-z, A-Z and 0-9 are allowed.
+long_options
+An array of options.
+Each element in this array will be used as option strings and matched against options passed to the script starting with two hyphens (--).
+For example, an longopts element "opt" recognizes an option --opt.
+rest_index
+If the rest_index parameter is present, then the index where argument parsing stopped will be written to this variable.
+The short_options parameter may contain the following elements:
+
+Individual characters (do not accept values)
+Characters followed by a colon (parameter requires value)
+Characters followed by two colons (optional value)
+Option values are the first argument after the string.
+If a value is required, it does not matter whether the value has leading white space or not.
+See note.
+
